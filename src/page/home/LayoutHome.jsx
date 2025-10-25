@@ -13,6 +13,8 @@ function LayoutHome() {
     <div>
       <Header />
       <Main />
+      <Main />
+      <Main />
     </div>
   )
 }

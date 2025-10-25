@@ -1,19 +1,14 @@
 import logo from "../../assets/logo.png";
-import { FaHome } from "react-icons/fa";
-import { FaBell } from "react-icons/fa";
-import { FaBitcoin } from "react-icons/fa";
 import { FaBars } from "react-icons/fa";
-import { FaGlobe } from "react-icons/fa";
-
+import home from "../../assets/home.png";
 import globo from "../../assets/globo.png";
 import campana from "../../assets/campana.png";
-import home from "../../assets/home.png";
 
 function Header() {
   return (
-    <header className="w-full flex  justify-center bg-gray-100 ">
-      <div className="h-[199px]" >
-        <div className="w-[1850px] h-[94px] p-4 flex justify-between items-center">
+    <header className="w-full bg-gray-100  sticky top-0 z-50  ">
+      <div className="h-[199px] w-full  px-4 flex justify-center ">
+        <div className="w-[1850px] h-[94px] flex justify-between items-center">
           <nav>
             <img src={logo} alt="logo" className="w-[100px]" />
           </nav>
@@ -21,6 +16,7 @@ function Header() {
           <nav className="flex gap-x-4">
             <div className="flex items-center  h-[54px]  border-b-2  border-b-black-800">
               <img src={home} alt="home" className="w-[65px]" />
+
               <span>Alojamiento</span>
             </div>
 
@@ -57,7 +53,7 @@ function Header() {
           </nav>
         </div>
 
-        <div className="flex items-center justify-center ">
+           {/* <div className="  flex items-center justify-center ">
           <div className="bg-white rounded-full shadow-lg p-2 flex items-center w-full max-w-3xl">
             <div className="flex-1 px-4 py-1">
               <label
@@ -89,7 +85,7 @@ function Header() {
                 id="dates"
                 name="dates"
                 placeholder="Agrega fechas"
-                class="w-full border-none focus:ring-0 p-0 text-sm placeholder-gray-500 bg-transparent outline-none"
+                className="w-full border-none focus:ring-0 p-0 text-sm placeholder-gray-500 bg-transparent outline-none"
               />
             </div>
 
@@ -128,7 +124,9 @@ function Header() {
               </svg>
             </button>
           </div>
-        </div>
+        </div> */}
+
+
       </div>
     </header>
   );
