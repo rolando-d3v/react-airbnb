@@ -6,15 +6,29 @@ import Main from './Main'
 
 
 
-
-
 function LayoutHome() {
   return (
-    <div>
+    <div >
       <Header />
       <Main />
-      <Main />
-      <Main />
+   
+
+      <div>
+        <footer>
+          <p>Footer</p>
+          <p>Footer</p>
+          <p>Footer</p>
+          <p>Footer</p>
+          <p>Footer</p>
+          <p>Footer</p>
+          <p>Footer</p>
+          <p>Footer</p>
+          <p>Footer</p>
+          <p>Footer</p>
+          <p>Footer</p>
+          <p>Footer</p>
+        </footer>
+      </div>
     </div>
   )
 }
