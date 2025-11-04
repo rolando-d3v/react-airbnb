@@ -3,9 +3,8 @@ import { FaBars } from "react-icons/fa";
 import home from "../../assets/home.png";
 import globo from "../../assets/globo.png";
 import campana from "../../assets/campana.png";
-import { useEffect } from "react";
-import { useState } from "react";
 import styles from "./main.module.css";
+import { useEffect, useState } from "react";
 
 function Header() {
   const [scrollY, setScrollY] = useState(0);
@@ -15,28 +14,32 @@ function Header() {
       const currentScroll =
         window.scrollY || document.documentElement.scrollTop;
       setScrollY(currentScroll);
-      console.log("Scroll actual:", currentScroll); // ✅ Aquí se ve el valor real
+      console.log("Scroll actual:", currentScroll);
     };
 
     window.addEventListener("scroll", handleScroll);
     handleScroll();
+
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
   console.log(scrollY);
 
   return (
     <header
-      className={`${styles.padding_largo}   ${scrollY > 20 && styles.padding_corto }`}
+      className={`${styles.padding_largo}   ${
+        scrollY > 20 && styles.padding_corto
+      }`}
     >
-      <div
-        className={`max-w-[1850px] w-full h-[94px] flex  justify-between items-center mx-auto `}
-      >
+      <div className={`max-w-[1850px] w-full h-[94px] flex  justify-between items-center mx-auto `} >
         <nav>
           <img src={logo} alt="logo" className="w-[100px] mr-10" />
         </nav>
 
         <nav className={`flex flex-col items-center`}>
-          <div className={`${styles.content_icons} ${scrollY > 20 && styles.esconder}`}>
+          <div
+            className={`${styles.content_icons} ${scrollY > 20 && styles.esconder}`}
+          >
             <div className="flex items-center  h-[54px]  border-b-2  border-b-black-800">
               <img src={home} alt="home" className="w-[65px]" />
 
@@ -53,16 +56,14 @@ function Header() {
               <span>Servicios</span>
             </div>
           </div>
+
           {/* sub-header */}
           <div
-            className={`flex items-center justify-center pb-[26px] ${
-              styles.hexa
-            }   ${scrollY > 20 ? styles.hex : ""}`}
+            className={`flex items-center justify-center pb-[26px] 
+              ${styles.sub_header}  ${scrollY > 20 ? styles.header_modificado : ""}`}
           >
             <div
-              className={` ${styles.header_normal}   ${
-                scrollY > 20 && styles.header_chico
-              }`}
+              className={` ${styles.header_normal}   ${scrollY > 20 && styles.header_chico}`}
             >
               <div className="flex-1 px-4 py-1">
                 <label

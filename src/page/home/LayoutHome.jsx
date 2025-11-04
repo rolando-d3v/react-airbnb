@@ -1,37 +1,16 @@
-
-import Header from './Header'
-import Main from './Main'
-
-
-
-
+import Header from "./Header";
+import Main from "./Main";
+import Footer from "./Footer";
 
 function LayoutHome() {
   return (
-    <div >
+    <div>
       <Header />
       <Main />
-   
 
-      <div>
-        <footer>
-          <p>Footer</p>
-          <p>Footer</p>
-          <p>Footer</p>
-          <p>Footer</p>
-          <p>Footer</p>
-          <p>Footer</p>
-          <p>Footer</p>
-          <p>Footer</p>
-          <p>Footer</p>
-          <p>Footer</p>
-          <p>Footer</p>
-          <p>Footer</p>
-        </footer>
-      </div>
+      <Footer />
     </div>
-  )
+  );
 }
 
-
-export default LayoutHome
+export default LayoutHome;
