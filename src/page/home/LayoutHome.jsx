@@ -7,7 +7,6 @@ function LayoutHome() {
     <div>
       <Header />
       <Main />
-
       <Footer />
     </div>
   );
