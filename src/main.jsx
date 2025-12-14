@@ -3,6 +3,7 @@ import { createRoot } from "react-dom/client";
 import App from "./App.jsx";
 import "./styles/index.css";
 
+
 // rutas
 import router from "./routes/routesApp";
 import { RouterProvider } from "react-router/dom";

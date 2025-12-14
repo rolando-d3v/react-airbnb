@@ -66,7 +66,12 @@ const Array_casa = [
     noche: 8,
     puntuacion: 4.5,
     image: casa_img,
-  },
+  },{ 
+    
+  }
+  
+
+  
 ];
 
 export default function Main() {

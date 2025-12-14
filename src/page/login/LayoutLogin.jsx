@@ -1,38 +1,66 @@
 import { useState } from "react";
+import { toast, Toaster } from "sonner";
+
+import { loginRequest } from "../../api/apiLogin";
 
 export default function LayoutLogin() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
-const [email, setEmail] = useState("")
-const [password, setPassword] = useState("")
+  const SendLogin = async (e) => {
+    e.preventDefault();
 
+    try {
+      if (email === "") {
+        alert("Por favor, completa el email");
+        return;
+      }
 
-const SendLogin = (e) => {
-    e.preventDefault()
+      if (!password) {
+        alert("Por favor, completa el password");
+        return;
+      }
 
-
-    if (email === "" ) {
-        alert("Por favor, completa el email")
-        return
-    }
-
-
-    if (!password) {
-        alert("Por favor, completa el password")
-        return
-    }
-   
-    const data = {
+      const data = {
         email: email,
         password: password,
-    }
+      };
 
-    console.log(data)
-   
-}
+      const res = await loginRequest(data);
+      sessionStorage.setItem("TK", res.data.token);
+
+      console.log(res);
+
+      toast.success("Login", {
+        // className: "my-classname",
+        description: "Exitoso",
+        duration: 1500,
+        position: "top-center",
+        // style: {
+        //   background: "#1DAA61",
+        //   color: "black",
+        // },
+        // icon: <MyIcon />,
+      });
+    } catch (error) {
+      console.log(error);
+      
+      toast.error("Login", {
+        // className: "my-classname",
+        description: error.response.data?.msg,
+        duration: 3000,
+        position: "top-center",
+      });
+    }
+  };
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-200 p-8">
-      <form  onSubmit={SendLogin}  className="w-full max-w-md bg-white rounded-2xl shadow-lg p-6 grid gap-4">
+      <Toaster richColors />
+      <form
+        onSubmit={SendLogin}
+        className="w-full max-w-md bg-white rounded-2xl shadow-lg p-6 grid gap-4"
+      >
         <h2 className="text-2xl font-semibold text-gray-800 text-center">
           Iniciar sesión
         </h2>
