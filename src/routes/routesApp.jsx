@@ -28,6 +28,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/user/profile",
+    element: <LayoutUser />,
     children: [
       {
         path: "about",
