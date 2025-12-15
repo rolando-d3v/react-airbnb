@@ -32,21 +32,15 @@ export default function LayoutLogin() {
       console.log(res);
 
       toast.success("Login", {
-        // className: "my-classname",
         description: "Exitoso",
         duration: 1500,
         position: "top-center",
-        // style: {
-        //   background: "#1DAA61",
-        //   color: "black",
-        // },
-        // icon: <MyIcon />,
+      
       });
     } catch (error) {
       console.log(error);
       
       toast.error("Login", {
-        // className: "my-classname",
         description: error.response.data?.msg,
         duration: 3000,
         position: "top-center",
