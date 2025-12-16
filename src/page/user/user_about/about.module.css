@@ -1,0 +1,6 @@
+.media_query {
+  @media (width > 1300px) {
+    display: flex;
+  }
+
+}

@@ -23,13 +23,13 @@ export default function LayoutUser() {
         <aside className="flex flex-col  items-center gap-4  bg-gray-50  w-[500px] px-4 py-8">
           <div className="flex flex-col gap-4">
             <h5 className="font-bold text-[35px]">Perfil</h5>
-            <Link to="about" className="flex items-center gap-4  px-8 hover:bg-gray-100">
+            <Link to="about" className="flex items-center gap-4  px-8 py-3  rounded-xl hover:bg-gray-200">
               <div className="h-9 w-9  bg-black   text-white rounded-full flex items-center justify-center     ">
                 R
               </div>
               <span className="font-semibold">Información sobre mí</span>
             </Link>
-            <Link to="past-trips" className="flex items-center px-8 gap-4 hover:bg-gray-100">
+            <Link to="past-trips" className="flex items-center px-8 py-3  rounded-xl gap-4 hover:bg-gray-200">
               <img
                 src="https://a0.muscache.com/im/pictures/airbnb-platform-assets/AirbnbPlatformAssets-UserProfile/original/797c1df2-a40c-4d93-9550-ca5b213cd01b.png?im_w=240"
                 alt=""
@@ -37,7 +37,7 @@ export default function LayoutUser() {
               />
               <span className="font-semibold">Viajes anteriores</span>
             </Link>
-            <Link to="connections" className="flex items-center px-8 gap-4 hover:bg-gray-100">
+            <Link to="connections" className="flex items-center px-8 py-3  rounded-xl gap-4 hover:bg-gray-200">
                <img
                 src="https://a0.muscache.com/im/pictures/airbnb-platform-assets/AirbnbPlatformAssets-UserProfile/original/797c1df2-a40c-4d93-9550-ca5b213cd01b.png?im_w=240"
                 alt=""
@@ -47,6 +47,8 @@ export default function LayoutUser() {
             </Link>
           </div>
         </aside>
+
+
         <main className="flex-1 p-4">
           <Outlet />
         </main>
