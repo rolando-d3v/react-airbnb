@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Outfit:wght@400;500;600;700;800&display=swap");
+
+.container {
+  display: flex;
+  min-height: 100vh;
+  font-family: "Outfit", sans-serif;
+}
+
+.leftPanel {
+  flex: 1;
+  background-image: url("https://images.unsplash.com/photo-1506012787146-f92b2d7d6d96?q=80&w=2069&auto=format&fit=crop");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  color: white;
+  padding-top: 4rem;
+}
+
+.leftPanelOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.leftContent {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 0 2rem;
+}
+
+.brand {
+  font-size: 4rem;
+  font-family: "Great Vibes", cursive;
+  margin-bottom: 0.5rem;
+}
+
+.tagline {
+  font-size: 1.1rem;
+  max-width: 400px;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.rightPanel {
+  flex: 1;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  position: relative;
+}
+
+.welcomeText {
+  color: #00aeef;
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.subText {
+  color: #888;
+  margin-bottom: 3rem;
+  font-size: 1rem;
+}
+
+.form {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.label {
+  color: #00aeef;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-left: 0.5rem;
+  background: white;
+  width: fit-content;
+  padding: 0 0.5rem;
+  margin-bottom: -13px;
+  z-index: 10;
+  position: relative;
+}
+
+.inputWrapper {
+  display: flex;
+  align-items: center;
+  border: 1px solid #00aeef;
+  border-radius: 12px;
+  padding: 0.8rem 1rem;
+  transition: all 0.3s ease;
+}
+
+.inputWrapper:focus-within {
+  box-shadow: 0 0 0 3px rgba(0, 174, 239, 0.2);
+}
+
+.inputIcon {
+  color: #333;
+  font-size: 1.2rem;
+  margin-right: 0.8rem;
+}
+
+.input {
+  border: none;
+  background: transparent;
+  width: 100%;
+  outline: none;
+  font-size: 1rem;
+  color: #333;
+}
+
+.forgotPassword {
+  text-align: right;
+  color: #888;
+  font-size: 0.85rem;
+  margin-top: -0.5rem;
+  cursor: pointer;
+}
+
+.loginButton {
+  background-color: #00aeef;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  box-shadow: 0 4px 14px rgba(0, 174, 239, 0.4);
+  margin-top: 1rem;
+  width: 150px;
+  align-self: center;
+}
+
+.loginButton:hover {
+  background-color: #0095cc;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 2rem 0;
+  color: #555;
+  font-weight: 600;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #e0e0e0;
+  margin: 0 1rem;
+}
+
+.socialButtons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.socialBtn {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  background-color: #f1f5f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.2s;
+  border: none;
+}
+
+.socialBtn:hover {
+  transform: translateY(-2px);
+}
+
+.registerText {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.registerLink {
+  color: #000;
+  font-weight: 700;
+  margin-left: 0.3rem;
+  cursor: pointer;
+}
+
+.skyline {
+  margin-top: auto;
+  width: 100%;
+  height: 60px;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none"><path d="M0,100 L0,50 L50,50 L50,80 L80,80 L80,40 L120,40 L120,90 L150,90 L150,30 L200,30 L200,100 Z" fill="%2300AEEF" /></svg>'); /* Simple placeholder skyline */
+  background-repeat: repeat-x;
+  background-position: bottom;
+  opacity: 0.5;
+}
+
+/* Plane path decoration */
+.planePath {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  width: 200px;
+  height: 100px;
+  background-image: url("data:image/svg+xml,%3Csvg width='200' height='100' viewBox='0 0 200 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 90 Q 50 10 190 10' stroke='%2300AEEF' stroke-width='2' stroke-dasharray='5 5' fill='none'/%3E%3Cpath d='M190 10 L 180 5 L 180 15 Z' fill='%2300AEEF'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+}
